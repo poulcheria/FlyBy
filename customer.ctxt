@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=customer
+comment1.params=user_id\ user_type\ customername\ password\ email\ phonenumber\ birthdate\ payment_method\ imagePath
+comment1.target=customer(int,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ java.util.Date,\ java.lang.String,\ java.lang.String)
+numComments=2
