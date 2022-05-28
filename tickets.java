@@ -1,7 +1,8 @@
 public class tickets {
     public String comment;
-    public tickets(int user_id, String comment) {
-        this.user_id=user_id;
+    public User user;
+    public tickets(User user, String comment) {
+        this.user=user;
         this.comment=comment;
     }
 
