@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=drone
+comment1.params=drone_id\ location\ price\ model\ flight_range\ quality_stream\ flagged_drones\ location_category\ owner_id
+comment1.target=drone(int,\ java.lang.String,\ float,\ java.lang.String,\ float,\ java.lang.String,\ int,\ int,\ int)
+numComments=2

@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=payment
+comment1.params=drone_id\ location\ price\ payment_method\ owner_id\ payment_id\ date_and_time\ costumer_id
+comment1.target=payment(int,\ java.lang.String,\ float,\ java.lang.String,\ int,\ int,\ java.lang.String,\ int)
+numComments=2
