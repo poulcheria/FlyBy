@@ -1,4 +1,4 @@
-public class Rent
+public class rent
 {
   public int rent_id;
   public Customer customer;
@@ -6,7 +6,7 @@ public class Rent
   public drone drone;
   
   
-  public Rent(int rent_id ,Customer customer,Owner owner,drone drone){
+  public rent(int rent_id ,Customer customer,Owner owner,drone drone){
         this.rent_id=rent_id;
         this.customer=customer;
         this.owner=owner;
