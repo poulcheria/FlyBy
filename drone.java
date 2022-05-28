@@ -8,10 +8,10 @@ public class drone
   public String quality_stream;
   public int flagged_drones;
   public int location_category;
-  public int owner_id;
+  public Owner owner;
   
   
-  public drone(int drone_id,String location,float price,String model,float flight_range,String quality_stream, int flagged_drones, int location_category,int owner_id){
+  public drone(int drone_id,String location,float price,String model,float flight_range,String quality_stream, int flagged_drones, int location_category,Owner owner){
      this.drone_id=drone_id;
      this.location=location;
      this.price=price;
@@ -20,7 +20,7 @@ public class drone
      this.quality_stream=quality_stream;
      this.flagged_drones=flagged_drones;
      this.location_category=location_category;
-     this.owner_id=owner_id;
+     this.owner=owner;
     
     
     
