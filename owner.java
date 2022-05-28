@@ -1,6 +1,6 @@
 import java.util.Date;
 //import javax.imageio.ImageIO;
-public class owner extends user
+public class Owner extends User
 {
    public String ownername;
     public String password;
@@ -12,7 +12,7 @@ public class owner extends user
     public int drone_id;
     
     
-    public owner(int user_id, String user_type,String ownername,String password,String email,int phonenumber,Date birthdate, String payment_method,String imagePath,int drone_id)
+    public Owner(int user_id, String user_type,String ownername,String password,String email,int phonenumber,Date birthdate, String payment_method,String imagePath,int drone_id)
     {
       super(user_id,user_type);
       this.ownername=ownername;
@@ -25,6 +25,3 @@ public class owner extends user
       this.drone_id=drone_id;
         
     }
-
-  
-}
