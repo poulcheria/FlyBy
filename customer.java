@@ -1,7 +1,7 @@
 import java.util.Date;
 //import javax.imageio.ImageIO;
 
-public class customer extends user
+public class Customer extends User
 {
     public String customername;
     public String password;
@@ -15,7 +15,7 @@ public class customer extends user
   
 
     
-    public customer(int user_id, String user_type,String customername,String password,String email,int phonenumber,Date birthdate, String payment_method,String imagePath)
+    public Customer(int user_id, String user_type,String customername,String password,String email,int phonenumber,Date birthdate, String payment_method,String imagePath)
     {
       super(user_id,user_type);
       this.customername=customername;
