@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 public class drone
 {
   public int drone_id;
@@ -8,10 +11,10 @@ public class drone
   public String quality_stream;
   public int flagged_drones;
   public int location_category;
-  public Owner owner;
+  public int owner_id;
+  public ArrayList<drone> droneList;
   
-  
-  public drone(int drone_id,String location,float price,String model,float flight_range,String quality_stream, int flagged_drones, int location_category,Owner owner){
+  public drone(int drone_id,String location,float price,String model,float flight_range,String quality_stream, int flagged_drones, int location_category,int owner_id){
      this.drone_id=drone_id;
      this.location=location;
      this.price=price;
@@ -20,12 +23,12 @@ public class drone
      this.quality_stream=quality_stream;
      this.flagged_drones=flagged_drones;
      this.location_category=location_category;
-     this.owner=owner;
-    
-    
-    
+     this.owner_id=owner_id;
+     this.droneList=new ArrayList<drone>();
+    }
+  public void set_droneList(drone drone){
+      this.droneList.add(drone);
     
     }
-  
   
 }
