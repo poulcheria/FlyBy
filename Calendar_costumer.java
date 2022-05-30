@@ -1,16 +1,18 @@
-import java.util.Date;
-import java.time.LocalTime;
-public class Calendar_costumer
+import java.util.*;
+public class Calendar_custumer
 {
-    public customer customer;
-    public Date date;
-    public LocalTime time;
-    public Calendar_costumer(customer customer,Date date,LocalTime time)
+    public Customer customer;
+    public Calendar calendar_c;
+    public ArrayList<Calendar> datesList; 
+    
+    public Calendar_custumer(Customer customer,Calendar calendar_c)
     {
        this.customer=customer;
-       this.date=date;
-       this.time=time;
+       this.calendar_c=calendar_c;
+       this.datesList=datesList;
     }
-
+    
+    
     
 }
+
