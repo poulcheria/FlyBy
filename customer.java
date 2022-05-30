@@ -1,9 +1,4 @@
-import java.util.Date;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Random;
+import java.util.*;
 //import javax.imageio.ImageIO;
 
 public class Customer extends User
@@ -17,7 +12,8 @@ public class Customer extends User
     public String imagePath;    // photo_profile
     public ArrayList<Customer> customerList; //customer list
     public ArrayList<String> locationList;  //loaction filter list
-  
+    public ArrayList<Integer> priceList;  //price filter list
+    public ArrayList<Calendar_custumer> datesList;
 
     
     public Customer(int user_id, String user_type,String customername,String password,String email,int phonenumber,Date birthdate, String payment_method,String imagePath)
@@ -32,6 +28,8 @@ public class Customer extends User
       this.imagePath=imagePath;
       this.customerList=new ArrayList<Customer>();
       this.locationList=new ArrayList<String>();
+      this.priceList=new ArrayList<Integer>();
+      this.datesList=new ArrayList<Calendar_custumer>();
     }
     
     public  void customer_Sign_Up() {
@@ -83,8 +81,25 @@ public class Customer extends User
         this.locationList.add(loc4);
         this.locationList.add(loc5);
         this.locationList.add(loc6);
-        drone d1=new drone(0,"Corfu" ,50,"model0" ,1000,"720p 30x24fps" ,0,1,0);
+        int pr1=50;
+        int pr2=150;
+        int pr3=500;
+        int pr4=1000;
+        int pr5=5000;
+        int pr6=10000;
+        this.priceList.add(pr1);
+        this.priceList.add(pr2);
+        this.priceList.add(pr3);
+        this.priceList.add(pr4);
+        this.priceList.add(pr5);
+        this.priceList.add(pr6);
+        drone d1=new drone(0,"Corfu" ,50,"model0" ,1000,"720p 30x24fps" ,0,1,0 ,1);
         d1.set_droneList(d1);
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DATE, +30);
+        
+        int rent=0;
+       while(rent==0){
         Scanner filter = new Scanner(System.in);
         System.out.println("Press 1 for location filter 2 for price range filter\n");
         int filt= filter.nextInt();
@@ -92,23 +107,83 @@ public class Customer extends User
             for(int i=0;i<this.locationList.size();i++){
                 System.out.println(i+1);
                 System.out.println(locationList.get(i) );
-                System.out.println("\n");
             } 
             Scanner loc = new Scanner(System.in);
             System.out.println("choose locations from 1 to 6\n");
             int loca= loc.nextInt();
             for(int i=0;i<d1.droneList.size();i++){
-                    System.out.println("SELECTED DRONE"); 
-                    System.out.println(d1.droneList.get(loca-1).drone_id); 
-                    System.out.println(d1.droneList.get(loca-1).price);
-                    System.out.println(d1.droneList.get(loca-1).flight_range);
-                    System.out.println(d1.droneList.get(loca-1).quality_stream);
-                    System.out.println(d1.droneList.get(loca-1).location);
+                if(d1.droneList.get(i).location_category==loca){
+                    System.out.println("SELECTED DRONE SPECIFICATIONS:"); 
+                    System.out.println("Drone ID: "+d1.droneList.get(i).drone_id); 
+                    System.out.println("Drone price: "+d1.droneList.get(i).price);
+                    System.out.println("Drone price: "+d1.droneList.get(i).flight_range);
+                    System.out.println("Drone quality stream: "+d1.droneList.get(i).quality_stream);
+                    System.out.println("Drone location: "+d1.droneList.get(i).location);
+                }
             } 
             
         
         }
-        else{}
+        else{
+            for(int i=0;i<this.priceList.size();i++){
+                System.out.println(i+1);
+                System.out.println("Price range under:" +priceList.get(i)+ " euros" );
+                System.out.println("\n");
+            } 
+            Scanner price = new Scanner(System.in);
+            System.out.println("choose price ranges from 1 to 6\n");
+            int pr= price.nextInt();
+            for(int i=0;i<d1.droneList.size();i++){
+                
+                if(d1.droneList.get(i).price_category==pr){
+                    System.out.println("SELECTED DRONE SPECIFICATIONS:"); 
+                    System.out.println("Drone ID: "+d1.droneList.get(i).drone_id); 
+                    System.out.println("Drone price: "+d1.droneList.get(i).price);
+                    System.out.println("Drone flight range: "+d1.droneList.get(i).flight_range);
+                    System.out.println("Drone quality stream: "+d1.droneList.get(i).quality_stream);
+                    System.out.println("Drone location: "+d1.droneList.get(i).location);
+                }
+                }
+            
+    
+            }
+        Scanner datee = new Scanner(System.in);
+        System.out.println("Would you like to set a date for this drone? yes(1) ,no(0)");
+        int date= datee.nextInt();
+        if(date==1){
+            System.out.println("Available date:"+ calendar.getTime());
+            Scanner rentt = new Scanner(System.in);
+            System.out.println("If you would like to Rent press 1 if you would like to check out other drones or log out press 0");
+            int re= rentt.nextInt();
+            if (re==1){
+                Calendar_custumer cal= new Calendar_custumer(customer,calendar);
+                datesList.add(cal);
+                System.out.println("RENTING COMPLETE!");
+                break;
+            }
+            else{
+                Scanner leave = new Scanner(System.in);
+                System.out.println("Press 1 if you would like to log out ,0 if you would like to check out other drones");
+                int le= leave.nextInt();
+                if (le==1){
+                    System.exit(0);
+                 }
+                
+            }
+            
         
+        
+        
+        }
+        else{
+                Scanner leav = new Scanner(System.in);
+                System.out.println("Press 1 if you would like to log out ,0 if you would like to check out other drones");
+                int lea= leav.nextInt();
+                if (lea==1){
+                    System.exit(0);
+                 }
+                
+            }
+      }
     }
 }
