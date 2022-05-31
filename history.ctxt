@@ -1,5 +1,9 @@
 #BlueJ class context
 comment0.target=history
-comment1.params=drone_id\ location\ costumer_id\ date_and_time\ owner_id\ flight_id\ photo_id\ payment_id\ flight_path
-comment1.target=history(int,\ java.lang.String,\ int,\ java.lang.String,\ int,\ int,\ int,\ int,\ java.lang.String)
-numComments=2
+comment1.params=drone\ location\ customer\ date\ time\ owner\ flight_id\ photo_id\ payment_id\ flight_path
+comment1.target=history(drone,\ java.lang.String,\ Customer,\ java.util.Date,\ int,\ Owner,\ int,\ int,\ int,\ java.lang.String)
+comment2.params=history
+comment2.target=void\ set_historyList(history)
+comment3.params=
+comment3.target=void\ browse_history()
+numComments=4

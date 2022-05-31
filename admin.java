@@ -49,4 +49,27 @@ public class admin extends User{
         }
          
     }
+    public void delete_user() {
+      User u1= new User(1,"costumer");
+      User u2= new User(5,"owner"); 
+      u1.set_userList(u1);  
+      u2.set_userList(u2);
+      
+      System.out.print( "Hello admin welcome to delete user option \n");
+      Scanner iddelete = new Scanner(System.in);
+      System.out.println("Please type the user id you want to delete");    
+      String id_delete= iddelete.nextLine();
+      int id_int_delete = Integer.parseInt(id_delete);
+      for(int i=0;i<u1.userList.size();i++){
+         if(u1.userList.get(i).user_id==id_int_delete) {
+            u1.userList.remove(i);
+            
+            
+            } 
+      }
+      for(int i=0;i<u1.userList.size();i++){
+         System.out.println("User id: "+u1.userList.get(i).user_id);
+         System.out.println("User  type: "+u1.userList.get(i).user_type);
+      }
+     }
 }
