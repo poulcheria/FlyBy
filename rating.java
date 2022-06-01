@@ -32,9 +32,9 @@ public class rating
        float fnRating=Float.parseFloat(nRating);  
        
        Date birthdate=new Date();
-       drone newdrone=new drone(0,".",0,".",0,".",0,0,0);
+       drone newdrone=new drone(0,".",0,".",0,".",0,0,0,1,1,1);
        Customer newcustomer=new Customer(0,"costumer","name","pass","email",687,birthdate,"card","filepath");
-       Owner newowner= new Owner(55,"Owner","name","nOpass" ,"nOemail",878,birthdate,"nOpay" ,"nOimg",newdrone,0);
+       Owner newowner= new Owner(55,"Owner","name","nOpass" ,"nOemail",878,birthdate,"nOpay" ,"nOimg",newdrone,1);
        rent nrent=new rent(ratingrentidint,newcustomer,newowner,newdrone);
        
        rating newrating= new rating(nComment,nrent,fnRating );
