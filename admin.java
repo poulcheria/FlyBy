@@ -17,7 +17,7 @@ public class admin extends User{
         this.birthdate=birthdate;
     }
     public void approve_owner() {
-        drone newdrone=new drone(0,".",0,".",0,".",0,0,0); 
+        drone newdrone=new drone(0,".",0,".",0,".",0,0,0,1,1,1); 
         Owner newowner= new Owner(55,"Owner","name","nOpass" ,"nOemail",878,birthdate,"nOpay" ,"nOimg",newdrone,1); 
         System.out.print( newowner.ownername+"\n");
         System.out.print( newowner.password+"\n");
@@ -45,19 +45,45 @@ public class admin extends User{
          newowner.approveValue=0;
          System.out.println("You did not approve this owner"+"\n");
          System.out.println("New approve value of owner\t"+newowner.approveValue);
-         
-         public void drone_management() {
-        drone newdrone2=new drone(0,".",0,".",0,".",0,0,0,0,0);
-        for (int i=0; i < newdrone.droneList.size(); i++) {
-            if (newdrone.droneList.get(i).inspected==0) {
-                System.out.println(droneList(i));
+        }
+    }
+    public void delete_user() {
+      User u1= new User(1,"costumer");
+      User u2= new User(5,"owner"); 
+      u1.set_userList(u1);  
+      u2.set_userList(u2);
+      
+      System.out.print( "Hello admin welcome to delete user option \n");
+      Scanner iddelete = new Scanner(System.in);
+      System.out.println("Please type the user id you want to delete");    
+      String id_delete= iddelete.nextLine();
+      int id_int_delete = Integer.parseInt(id_delete);
+      for(int i=0;i<u1.userList.size();i++){
+         if(u1.userList.get(i).user_id==id_int_delete) {
+            u1.userList.remove(i);
+            
+            
+            } 
+      }
+      for(int i=0;i<u1.userList.size();i++){
+         System.out.println("User id: "+u1.userList.get(i).user_id);
+         System.out.println("User  type: "+u1.userList.get(i).user_type);
+      }
+     }
+    public void drone_management() {
+        drone newdrone2=new drone(0,".",0,".",0,".",0,0,0,1,1,1);
+        for (int i=0; i < newdrone2.droneList.size(); i++) {
+            if (newdrone2.droneList.get(i).inspected==0) {
+                for (int j=0; j < newdrone2.droneList.size(); j++){
+                System.out.println(newdrone2.droneList.get(j));
+            }
             }
         }
         System.out.println("Choose a drone to inspect");
 
         Scanner droneid = new Scanner(System.in);   
-        int drone_id = droneid.nextLine();
-        int selected_drone = Integer.parseInt(drone_id);
+        int drone_id = droneid.nextInt();
+        //int selected_drone = Integer.parseInt(drone_id);
 
         Scanner keyboard = new Scanner(System.in);
 
@@ -66,8 +92,8 @@ public class admin extends User{
         System.out.println("2. Delete Drone");
         System.out.println("3. Set Availability");
 
-        String choice = keyboard.nextInt();
-        int ichoice =Integer.parseInt(choice);
+        Scanner choice= new Scanner(System.in);   
+        int ichoice = choice.nextInt();
 
         if (ichoice == 1) {
             //emfanise tou malaka tou admin eikones pou xei anevasei o malakas o owner
