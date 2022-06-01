@@ -93,7 +93,7 @@ public class Customer extends User
         this.priceList.add(pr4);
         this.priceList.add(pr5);
         this.priceList.add(pr6);
-        drone d1=new drone(0,"Corfu" ,50,"model0" ,1000,"720p 30x24fps" ,0,1,0 ,1);
+        drone d1=new drone(0,"Corfu" ,50,"model0" ,1000,"720p 30x24fps" ,0,1,0 ,1,0,1);
         d1.set_droneList(d1);
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.DATE, +30);
@@ -185,5 +185,15 @@ public class Customer extends User
                 
             }
       }
+    }
+    public void print_customer(Customer customer){
+        System.out.print("Customer name: "+ customer.customername+"\n");
+        System.out.print("Customer password: "+customer.password+"\n");
+        System.out.print("Customer email: "+customer.email+"\n");
+        System.out.print("Customer phone number: "+customer.phonenumber+"\n");
+        System.out.print("Customer birthdate: "+ customer.birthdate+"\n");
+        System.out.print("Customer payment method: "+ customer.payment_method+"\n");
+        System.out.print("Customer image path: "+customer.imagePath+"\n");
+        
     }
 }
