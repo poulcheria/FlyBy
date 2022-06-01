@@ -39,7 +39,7 @@ public class Owner extends User
                 int upperbound=100;
                 int id = rand.nextInt(upperbound); 
                 Date birthdate= new Date();
-                drone newdrone= new drone(0 ,"." ,0,"." ,0 ,"." ,0,0, 0);
+                drone newdrone= new drone(0," ." ,50," m" ,2," g", 0, 1,1,1,1,1);
                 
                 Scanner newOname = new Scanner(System.in);
                 System.out.println("please add your name\n");
@@ -70,7 +70,44 @@ public class Owner extends User
                System.out.println("You are signed up !\n");
             }
     
-}
 
+    public void drone_registration(Owner owner){
+        if(owner.approveValue==1){
+            System.out.println("DRONE REGISTRATION");
+            
+            Random rand= new Random();
+            int upperbound=100;
+            int id = rand.nextInt(upperbound); 
+            
+            Scanner model = new Scanner(System.in);
+            System.out.println("please add your drone's model\n");
+            String mode= model.nextLine();
+                
+            Scanner range = new Scanner(System.in);
+            System.out.println("please add your drone's range\n");
+            float rang= range.nextInt();
+                
+            Scanner streamq = new Scanner(System.in);
+            System.out.println("please add your drone's stream quality\n");
+            String stream= streamq.nextLine();
+            
+            Scanner location = new Scanner(System.in);
+            System.out.println("please add your drone's location\n");
+            String loc= location.nextLine();
+            
+            Scanner price = new Scanner(System.in);
+            System.out.println("please add your drone's price\n");
+            float pri= price.nextInt();
+            drone drone=new drone(id,loc,pri,mode,rang,stream,0,1,0,1,1,0);
+            drone.set_droneList(drone);
+            System.out.println("DRONE REGISTRATION COMPLETE!");
+                
+        }
+        
+        
+    
+    
+    }
+}
   
 
