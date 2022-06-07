@@ -96,7 +96,7 @@ public class admin extends User{
         int ichoice = choice.nextInt();
 
         if (ichoice == 1) {
-            //emfanise tou malaka tou admin eikones pou xei anevasei o malakas o owner
+           
             Scanner newapproved = new Scanner(System.in);
 
             System.out.println("Set drone status:");
@@ -115,7 +115,7 @@ public class admin extends User{
                 Scanner comm = new Scanner(System.in);
                 System.out.println("Input reason for declining drone:");
                 String comment = comm.nextLine();
-                //enhmerwse ton owner oti to drone aporifthike kai to logo
+              
 
             }
         else if (ichoice == 2) {
@@ -123,7 +123,7 @@ public class admin extends User{
             newdrone2 = null; //diagrafh drone apo vash
         }
         else if (ichoice == 3) {
-            //troll
+            
         }
         }
     }
