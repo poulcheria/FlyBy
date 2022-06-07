@@ -34,7 +34,7 @@ public class payment
 
     if ( imethod == 1 ) {
         System.out.println()
-        //send OTP
+        //send OTP codes
         //validate payment
         System.out.println("You successfully rented drone" + this.drone + ", your flight is scheduled for " + this.date + this.time + "and your total payment is " + this.price);
         System.out.println("Your payment number is " + this.payment_id);
