@@ -1,6 +1,6 @@
-
 import java.util.Date;
 import java.time.LocalTime;
+import java.util.Scanner;
 public class payment
 {
   public rent rent;
@@ -23,6 +23,7 @@ public class payment
      this.payment_method=payment_method;
     }
   public void payment(){
+    drone newdrone= new drone(0," ." ,50," m" ,2," g", 0, 1,1,1,1,1);
     Scanner keyboard = new Scanner(System.in);
 
     System.out.println("Choose payment method:");
@@ -33,18 +34,17 @@ public class payment
     int imethod = method.nextInt();
 
     if ( imethod == 1 ) {
-        System.out.println()
+        System.out.println();
         //send OTP codes
         //validate payment
-        System.out.println("You successfully rented drone" + this.drone + ", your flight is scheduled for " + this.date + this.time + "and your total payment is " + this.price);
+        System.out.println("You successfully rented drone with id " + newdrone.drone_id + ", your flight is scheduled for " + this.date + this.time + "and your total payment is " + this.price);
         System.out.println("Your payment number is " + this.payment_id);
         }
     else if ( imethod == 2 ) {
         //Create deposit adress
-        System.out.println("You successfully rented drone" + this.drone + ", your flight is scheduled for " + this.date + this.time + "and your total payment is " + this.price);
+        System.out.println("You successfully rented dronewith id" + newdrone.drone_id + ", your flight is scheduled for " + this.date + this.time + "and your total payment is " + this.price);
         System.out.println("Your transaction ID  is " + this.payment_id);
         }
     }
 }
   
-}
