@@ -247,6 +247,8 @@ public class Customer extends User
                 
                 rent myrent= new rent(id,customer,d1);
                 id=id+1;
+                payment pay=new payment(myrent,"here" ,0,".",id,null,null);
+                pay.payment();
                 System.out.println("RENTING COMPLETE!");
                 break;
             }
