@@ -33,6 +33,64 @@ public class Owner extends User
       this.approveValue=approveValue;
       this.ownerList=new ArrayList<Owner>();  
        }
+       public void owner_interface(Owner owner){
+        System.out.println("Press 1 for Sing up and 2 for Log in");
+        Scanner silo = new Scanner(System.in);
+        int sl= silo.nextInt();
+        if(sl==1){
+        owner_Sign_Up();
+        owner_login(owner);
+        }
+        else{
+            owner_login(owner);
+        }
+        
+        }
+       public void owner_login(Owner owner){
+       drone d1=new drone(0,"Corfu" ,50,"model0" ,1000,"720p 30x24fps" ,0,1,0 ,1,0,1);
+       Customer newcustomer= new Customer(67,"custormer","fg","fg","dfdrg",65,birthdate,"yfghj" ,"fth");
+       history h1=new history(d1,"Corfu" ,newcustomer,birthdate ,1,owner ,0,1,0 ,"path");
+       Owner owner1= new Owner(1,"Owner","poul" ,"poulzpass"  ,"poulz@gmail.com",10000,birthdate,"crypto" ,"C:UserspoulcheriaPicturesSaved Pictures",null,1);
+       Owner owner2= new Owner(2,"Owner","nikos" ,"nikospass"  ,"nir@gmail.com",10000,birthdate,"crypto" ,"C:UserspPicturesSaved Pictures",null,1);
+       Owner owner3= new Owner(3,"Owner","porto" ,"nikipass"  ,"np@gmail.com",10000,birthdate,"card" ,"C:UserspotPicturesSaved Pictures",null,1);
+       Owner owner4= new Owner(4,"Owner","pandhs" ,"taspass"  ,"tp@gmail.com",10000,birthdate,"card" ,"C:UsersptasPicturesSaved Pictures",null,1);
+        
+        
+       this.ownerList.add(owner1);
+       this.ownerList.add(owner2);
+       this.ownerList.add(owner3);
+       this.ownerList.add(owner4);
+       
+        System.out.println("Log in as Owner insert id:");
+         Scanner code = new Scanner(System.in);
+         int co= code.nextInt();
+        for(int i=0;i<owner.ownerList.size();i++){
+          if(owner.ownerList.get(i).user_id==co)
+            {
+            System.out.println("\nChoose options: \n1. Drone Registration\n2. Edit Drone\n3. Browze Histroty\n4. Leave");
+            Scanner opt = new Scanner(System.in);
+            int op= opt.nextInt();
+            if(op==1){ 
+                drone_registration(owner);
+            }
+            else if(op==2){
+                d1.edit_drone();
+            }
+            else if(op==3){
+                h1.browse_history();
+            }
+            else{
+            System.exit(0);
+            }
+        
+        
+        }
+        else{
+             System.out.println("ID incorrect try again");
+            owner_login(owner);
+        }
+    }
+}
     public  void owner_Sign_Up()
             {
                 Random rand= new Random();
@@ -99,7 +157,12 @@ public class Owner extends User
             System.out.println("please add your drone's price\n");
             float pri= price.nextInt();
             drone drone=new drone(id,loc,pri,mode,rang,stream,0,1,0,1,1,0);
+            try{
             drone.set_droneList(drone);
+            }
+            catch(FlybyException ex){
+         
+            }
             System.out.println("DRONE REGISTRATION COMPLETE!");
                 
         }
