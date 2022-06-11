@@ -30,8 +30,14 @@ public class drone
      this.approved=approved;
      this.droneList=new ArrayList<drone>();
     }
-  public void set_droneList(drone drone){
-      this.droneList.add(drone);
+  public void set_droneList(drone drone) throws FlybyException{
+      if(this.droneList.contains(drone)){   //ελέγχω αν το αντικελιμενο που θέλω να προσθέσω υπάρχει ήδη στη λίστα 
+          throw new FlybyException("Item already exists"); //χρησιμοποιώ κλάση εξαίρεσης αν το αντικείμενο υπα΄ρχει ήδη στη λίστα
+        }
+        else{                   //αν δεν υπάρχει το προσθέτω στη λίστα
+            this.droneList.add(drone);
+        }
+      
     
     }
    public void print_drone(drone drone){
