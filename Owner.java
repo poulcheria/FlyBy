@@ -49,7 +49,7 @@ public class Owner extends User
        public void owner_login(Owner owner){
        drone d1=new drone(0,"Corfu" ,50,"model0" ,1000,"720p 30x24fps" ,0,1,0 ,1,0,1);
        Customer newcustomer= new Customer(67,"custormer","fg","fg","dfdrg",65,birthdate,"yfghj" ,"fth");
-       history h1=new history(d1,"Corfu" ,newcustomer,birthdate ,1,owner ,0,1,0 ,"path");
+       history h1=new history(d1,"Corfu",10,9 ,newcustomer,birthdate ,1,owner ,0,1,0 ,"path");
        Owner owner1= new Owner(1,"Owner","poul" ,"poulzpass"  ,"poulz@gmail.com",10000,birthdate,"crypto" ,"C:UserspoulcheriaPicturesSaved Pictures",null,1);
        Owner owner2= new Owner(2,"Owner","nikos" ,"nikospass"  ,"nir@gmail.com",10000,birthdate,"crypto" ,"C:UserspPicturesSaved Pictures",null,1);
        Owner owner3= new Owner(3,"Owner","porto" ,"nikipass"  ,"np@gmail.com",10000,birthdate,"card" ,"C:UserspotPicturesSaved Pictures",null,1);

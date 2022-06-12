@@ -15,10 +15,12 @@ public class history
   public int flight_id;
   public int photo_id;
   public int payment_id;
+  public int price;
+  public float rating;
   public String flight_path;
   public ArrayList<history> historyList;
   
-  public history( drone drone,String location,Customer customer,Date date, int time,Owner owner,int flight_id,int photo_id,int payment_id,String flight_path){
+  public history( drone drone,String location,int price ,float rating,Customer customer,Date date, int time,Owner owner,int flight_id,int photo_id,int payment_id,String flight_path){
      this.drone=drone;
      this.location=location;
      this.owner=owner;
@@ -27,6 +29,8 @@ public class history
      this.customer=customer;
      this.date=date;
      this.time=time;
+     this.price=price;
+     this.rating=rating;
      this.flight_id=flight_id;
      this.flight_path=flight_path;
      this.historyList=new ArrayList<history>();
@@ -41,9 +45,9 @@ public class history
     drone newdrone= new drone(0," ." ,50," m" ,2," g", 0, 1,1,1,1,1);
     Owner newowner= new Owner(55,"Owner","name","nOpass" ,"nOemail",878,birthdate,"nOpay" ,"nOimg",newdrone,1);
     Customer newcustomer= new Customer(67,"custormer","fg","fg","dfdrg",65,birthdate,"yfghj" ,"fth");
-    history h1=new history(newdrone,"Corfu" ,newcustomer,birthdate ,1,newowner ,0,1,0 ,"path");
+    history h1=new history(newdrone,"Corfu",10,4 ,newcustomer,birthdate ,1,newowner ,0,1,0 ,"path");
     h1.set_historyList(h1);  
-    history h2=new history(newdrone,"Komotini" ,newcustomer,birthdate ,1,newowner ,0,1,0 ,"path");
+    history h2=new history(newdrone,"Komotini",10,3 ,newcustomer,birthdate ,1,newowner ,0,1,0 ,"path");
     h2.set_historyList(h2); 
     
     
@@ -69,6 +73,8 @@ public class history
                     System.out.println("Drone location: "+h1.historyList.get(i).location);
                     System.out.println("Date: "+h1.historyList.get(i).date);
                     System.out.println("Time: "+h1.historyList.get(i).time);
+                    System.out.println("Rating: "+h1.historyList.get(i).rating);
+                    System.out.println("Price: "+h1.historyList.get(i).price);
                     System.out.println("Flight id: "+h1.historyList.get(i).flight_id);
                     System.out.println("Payment id: "+h1.historyList.get(i).payment_id);
                     System.out.println("Photo id: "+h1.historyList.get(i).photo_id);
@@ -91,6 +97,8 @@ public class history
                     System.out.println("Drone location: "+h1.historyList.get(i).location);
                     System.out.println("Date: "+h1.historyList.get(i).date);
                     System.out.println("Time: "+h1.historyList.get(i).time);
+                    System.out.println("Rating: "+h1.historyList.get(i).rating);
+                    System.out.println("Price: "+h1.historyList.get(i).price);
                     System.out.println("Flight id: "+h1.historyList.get(i).flight_id);
                     System.out.println("Payment id: "+h1.historyList.get(i).payment_id);
                     System.out.println("Photo id: "+h1.historyList.get(i).photo_id);
@@ -104,7 +112,7 @@ public class history
         String ndat= dat.nextLine();
         for(int i=0;i<h1.historyList.size();i++){
                       if(h1.historyList.get(i).date.equals(ndat)){
-                    System.out.println("------------------------------------------------");
+                  System.out.println("------------------------------------------------");
                     System.out.println("SELECTED DRONE HISTORY SPECIFICATIONS:"); 
                     System.out.println("------------------------------------------------");
                     newdrone.print_drone(newdrone); 
@@ -112,6 +120,8 @@ public class history
                     System.out.println("Drone location: "+h1.historyList.get(i).location);
                     System.out.println("Date: "+h1.historyList.get(i).date);
                     System.out.println("Time: "+h1.historyList.get(i).time);
+                    System.out.println("Rating: "+h1.historyList.get(i).rating);
+                    System.out.println("Price: "+h1.historyList.get(i).price);
                     System.out.println("Flight id: "+h1.historyList.get(i).flight_id);
                     System.out.println("Payment id: "+h1.historyList.get(i).payment_id);
                     System.out.println("Photo id: "+h1.historyList.get(i).photo_id);
@@ -123,43 +133,55 @@ public class history
         
         
         
-    }
+     }
     else if(ihanswer==4){
-        System.out.println("Please type 1 for ascending order of price or 0 for descending order of price");
-        Scanner order = new Scanner(System.in);
-        String norder= order.nextLine();
-        int neworder = Integer.parseInt(norder);
-        //φθινουσα
-        if (neworder==0){
-            
-            
-        
-        
-        
-        }
-        
-        //αυξουσα
-        else if(neworder==1){
-        }
+        System.out.println("Please choose the price you want to browse for");
+        Scanner pr = new Scanner(System.in);
+        String npr= pr.nextLine();
+        int newpr = Integer.parseInt(npr);
+       for(int i=0;i<h1.historyList.size();i++){
+                      if(h1.historyList.get(i).price==newpr){
+                  System.out.println("------------------------------------------------");
+                    System.out.println("SELECTED DRONE HISTORY SPECIFICATIONS:"); 
+                    System.out.println("------------------------------------------------");
+                    newdrone.print_drone(newdrone); 
+                    newcustomer.print_customer(newcustomer);
+                    System.out.println("Drone location: "+h1.historyList.get(i).location);
+                    System.out.println("Date: "+h1.historyList.get(i).date);
+                    System.out.println("Time: "+h1.historyList.get(i).time);
+                    System.out.println("Rating: "+h1.historyList.get(i).rating);
+                    System.out.println("Price: "+h1.historyList.get(i).price);
+                    System.out.println("Flight id: "+h1.historyList.get(i).flight_id);
+                    System.out.println("Payment id: "+h1.historyList.get(i).payment_id);
+                    System.out.println("Photo id: "+h1.historyList.get(i).photo_id);
+                    System.out.println("Flight path: "+h1.historyList.get(i).flight_path);
+                    System.out.println("------------------------------------------------");
+            } }
         
     }
     else if(ihanswer==5){
-        System.out.println("Please type 1 for ascending order of rating or 0 for descending order of rating");
-        Scanner order = new Scanner(System.in);
-        String norder= order.nextLine();
-        int neworder = Integer.parseInt(norder);
-        //φθινουσα
-        if (neworder==0){
-            //Collections.sort(historyList);
-            
-        
-        
-        
-        }
-        
-        //αυξουσα
-        else if(neworder==1){
-        }
+        System.out.println("Please Please choose the rating you want to browse for");
+        Scanner rat = new Scanner(System.in);
+        String nrat= rat.nextLine();
+        float newrat = Float.parseFloat(nrat);
+        for(int i=0;i<h1.historyList.size();i++){
+                      if(h1.historyList.get(i).rating==newrat){
+                    System.out.println("------------------------------------------------");
+                    System.out.println("SELECTED DRONE HISTORY SPECIFICATIONS:"); 
+                    System.out.println("------------------------------------------------");
+                    newdrone.print_drone(newdrone); 
+                    newcustomer.print_customer(newcustomer);
+                    System.out.println("Drone location: "+h1.historyList.get(i).location);
+                    System.out.println("Date: "+h1.historyList.get(i).date);
+                    System.out.println("Time: "+h1.historyList.get(i).time);
+                    System.out.println("Rating: "+h1.historyList.get(i).rating);
+                    System.out.println("Price: "+h1.historyList.get(i).price);
+                    System.out.println("Flight id: "+h1.historyList.get(i).flight_id);
+                    System.out.println("Payment id: "+h1.historyList.get(i).payment_id);
+                    System.out.println("Photo id: "+h1.historyList.get(i).photo_id);
+                    System.out.println("Flight path: "+h1.historyList.get(i).flight_path);
+                    System.out.println("------------------------------------------------");
+            } }
         
     }
     

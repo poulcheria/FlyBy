@@ -2,6 +2,12 @@
 comment0.target=Owner
 comment1.params=user_id\ user_type\ ownername\ password\ email\ phonenumber\ birthdate\ payment_method\ imagePath\ drone\ approveValue
 comment1.target=Owner(int,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ java.util.Date,\ java.lang.String,\ java.lang.String,\ drone,\ int)
-comment2.params=
-comment2.target=void\ owner_Sign_Up()
-numComments=3
+comment2.params=owner
+comment2.target=void\ owner_interface(Owner)
+comment3.params=owner
+comment3.target=void\ owner_login(Owner)
+comment4.params=
+comment4.target=void\ owner_Sign_Up()
+comment5.params=owner
+comment5.target=void\ drone_registration(Owner)
+numComments=6

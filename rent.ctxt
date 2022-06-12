@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.target=rent
-comment1.params=rent_id\ customer_id\ owner_id\ drone_id
-comment1.target=rent(int,\ int,\ int,\ int)
+comment1.params=rent_id\ customer\ drone
+comment1.target=rent(int,\ Customer,\ drone)
 numComments=2

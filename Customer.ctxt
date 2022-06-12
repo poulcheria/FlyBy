@@ -1,5 +1,17 @@
 #BlueJ class context
-comment0.target=customer
+comment0.target=Customer
 comment1.params=user_id\ user_type\ customername\ password\ email\ phonenumber\ birthdate\ payment_method\ imagePath
-comment1.target=customer(int,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ java.util.Date,\ java.lang.String,\ java.lang.String)
-numComments=2
+comment1.target=Customer(int,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ java.util.Date,\ java.lang.String,\ java.lang.String)
+comment2.params=cust
+comment2.target=void\ customer_interface(Customer)
+comment3.params=cust
+comment3.target=void\ customer_login(Customer)
+comment4.params=
+comment4.target=void\ customer_Sign_Up()
+comment5.params=customer
+comment5.target=void\ Rent_a_drone(Customer)
+comment6.params=cust
+comment6.target=void\ comment_rating(Customer)
+comment7.params=customer
+comment7.target=void\ print_customer(Customer)
+numComments=8

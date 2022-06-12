@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.target=rating
-comment1.params=drone_id\ comment\ costumer\ rent_id\ owner_id\ rating_value
-comment1.target=rating(int,\ java.lang.String,\ int,\ int,\ int,\ float)
+comment1.params=comment\ rent\ rating_value
+comment1.target=rating(java.lang.String,\ rent,\ float)
 numComments=2

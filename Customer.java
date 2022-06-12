@@ -14,8 +14,7 @@ public class Customer extends User
     public ArrayList<String> locationList;  //loaction filter list
     public ArrayList<Integer> priceList;  //price filter list
     public ArrayList<Calendar_custumer> datesList;
-    
-    
+ 
     public Customer(int user_id, String user_type,String customername,String password,String email,int phonenumber,Date birthdate, String payment_method,String imagePath)
     {
       super(user_id,user_type);
@@ -49,38 +48,46 @@ public class Customer extends User
                 comment_rating(cust);
             
             }
-        }
+       }
         else{
             customer_login(cust);
-        }
+       }
         
-        }
-       public void customer_login(Customer cust){
+    }
+    public void customer_login(Customer cust){
            drone newdrone=new drone(0,".",0,".",0,".",0,0,0,1,1,1);
-           Customer newcustomer=new Customer(0,"costumer","name","pass","email",687,birthdate,"card","filepath");
-           Customer customer1= new Customer(1,"custormer","niki" ,"portopass","nikiporto@gmail.com",6988888,birthdate,"card" ,"C:UsersnikiPicturesSaved Pictures");
-           Customer customer2= new Customer(2,"custormer","rapths" ,"rapthspass","Nrapths@gmail.com",6977777,birthdate,"crypto" ,"C:NrapthsPicturesSaved Pictures");
-           Customer customer3= new Customer(3,"custormer","tasos" ,"tasospass","Tasos@gmail.com",69666666,birthdate,"crypto" ,"C:PandhsPicturesSaved Pictures");
-           Customer customer4= new Customer(4,"custormer","poulcheria" ,"poulpass","poulz@gmail.com",6955555,birthdate,"card" ,"C:poulzsPicturesSaved Pictures");
+           //  Customer newcustomer=new Customer(0,"costumer","name","pass","email",687,birthdate,"card","filepath");
+           //Customer customer1= new Customer(1,"custormer","niki" ,"portopass","nikiporto@gmail.com",6988888,birthdate,"card" ,"C:UsersnikiPicturesSaved Pictures");
+           //Customer customer2= new Customer(2,"custormer","rapths" ,"rapthspass","Nrapths@gmail.com",6977777,birthdate,"crypto" ,"C:NrapthsPicturesSaved Pictures");
+           //Customer customer3= new Customer(3,"custormer","tasos" ,"tasospass","Tasos@gmail.com",69666666,birthdate,"crypto" ,"C:PandhsPicturesSaved Pictures");
+           //Customer customer4= new Customer(4,"custormer","poulcheria" ,"poulpass","poulz@gmail.com",6955555,birthdate,"card" ,"C:poulzsPicturesSaved Pictures");
         
-           this.customerList.add(newcustomer);
-           this.customerList.add(customer1);
-           this.customerList.add(customer2);
-           this.customerList.add(customer3);
-           this.customerList.add(customer4);           
+           //this.customerList.add(newcustomer);
+           //this.customerList.add(customer1);
+           //this.customerList.add(customer2);
+           //this.customerList.add(customer3);
+           //this.customerList.add(customer4);           
            
+         customerList.add(new Customer(0,"customer","name","pass","email",687,birthdate,"card","filepath"));
+         customerList.add(new Customer(1,"customer","niki" ,"portopass","nikiporto@gmail.com",6988888,birthdate,"card" ,"C:UsersnikiPicturesSaved Pictures"));
+         customerList.add( new Customer(2,"custormer","rapths" ,"rapthspass","Nrapths@gmail.com",6977777,birthdate,"crypto" ,"C:NrapthsPicturesSaved Pictures")); 
+         
+         
          System.out.println("Log in as Customer insert id:");
          Scanner code = new Scanner(System.in);
-         int co= code.nextInt();
-         for(int i=0;i<this.customerList.size();i++){
-             System.out.println(this.customerList.get(i).user_id);
-          if(this.customerList.get(i).user_id==co)
-            {
-            System.out.println("Choose options: \n1. Rent a drone\n2. Comment and Rate a Flight\n3. Leave");
-            Scanner opt = new Scanner(System.in);
+         int co=code.nextInt();
+         
+         
+       for(int i=0;i<=this.customerList.size();i++){
+         System.out.println(this.customerList.get(i).user_id);
+            
+         
+         if(this.customerList.get(i).user_id==co){
+           System.out.println("Choose options: \n1. Rent a drone\n2. Comment and Rate a Flight\n3. Leave");
+           Scanner opt = new Scanner(System.in);
             int op= opt.nextInt();
             if(op==1){ 
-                cust.Rent_a_drone(cust);
+               cust.Rent_a_drone(cust);
             }
             else if(op==2){
                 
@@ -88,13 +95,13 @@ public class Customer extends User
             
             }
             else{
-            System.exit(0);
-        }
+           System.exit(0);
+           }
         
         
         }
         else{
-             System.out.println("ID incorrect try again");
+            System.out.println("ID incorrect try again");
             customer_login(cust);
         }
         }
