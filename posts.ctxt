@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=posts
+comment1.params=photo_id\ user\ drone_id\ flagged_posts\ comment
+comment1.target=posts(int,\ User,\ int,\ int,\ java.lang.String)
+comment2.params=posts
+comment2.target=void\ set_postsList(posts)
+comment3.params=posts
+comment3.target=void\ print_post(posts)
+numComments=4

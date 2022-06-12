@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=tickets
+comment1.params=user\ comment\ state
+comment1.target=tickets(User,\ java.lang.String,\ java.lang.String)
+comment2.params=tickets
+comment2.target=void\ set_ticketsList(tickets)
+comment3.params=ticket
+comment3.target=void\ print_ticket(tickets)
+numComments=4

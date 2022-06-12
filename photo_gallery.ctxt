@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=photo_gallery
+comment1.params=photo_id\ imagePath\ rent
+comment1.target=photo_gallery(int,\ java.lang.String,\ rent)
+numComments=2

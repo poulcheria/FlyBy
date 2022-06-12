@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=moderation
+comment1.params=posts\ tickets\ drone
+comment1.target=moderation(posts,\ tickets,\ drone)
+numComments=2
