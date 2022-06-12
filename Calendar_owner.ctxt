@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.target=Calendar_owner
 comment1.params=owner\ date\ time
-comment1.target=Calendar_owner(owner,\ java.util.Date,\ java.time.LocalTime)
+comment1.target=Calendar_owner(Owner,\ java.util.Date,\ java.time.LocalTime)
 numComments=2

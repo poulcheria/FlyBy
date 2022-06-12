@@ -84,7 +84,7 @@ public class admin extends User{
       User u1= new User(1,"costumer");
       User u2= new User(5,"owner"); 
       u1.set_userList(u1);  
-      u2.set_userList(u2);
+      u1.set_userList(u2);
       
       System.out.print( "Hello admin welcome to delete user option \n");
       Scanner iddelete = new Scanner(System.in);
@@ -94,7 +94,7 @@ public class admin extends User{
       for(int i=0;i<u1.userList.size();i++){
          if(u1.userList.get(i).user_id==id_int_delete) {
             u1.userList.remove(i);
-            
+             System.out.print( "USER DELETED SUCCESSFULLY");
             
             } 
       }
@@ -141,7 +141,7 @@ public class admin extends User{
         System.out.println("1. Inspect Drone");
         System.out.println("2. Delete Drone");
         System.out.println("3. Set Availability");
-        System.out.println("3. Leave");
+        System.out.println("4. Leave");
 
         Scanner choice= new Scanner(System.in);   
         int ichoice = choice.nextInt();
@@ -174,7 +174,7 @@ public class admin extends User{
             newdrone2.droneList.remove(newdrone2);
         }
         else if (ichoice == 3) {
-            //troll
+            
         }
         else{
         System.exit(0);
