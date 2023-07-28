@@ -1,5 +1,8 @@
 # FlyBy - Drone Rental Platform
 FlyBy is a platform-project that enables clients to rent and pilot drones located anywhere in the world. Users can rent drones for various purposes, such as enjoying scenic views, covering local events, journalism, photography, and more. Drone owners can participate in the rental model and receive monetary compensation from the renters.
+## Description
+FlyBy is a university project for the Computer Engineering and Informatics Department (CEID) that connects drone owners with users seeking drone services. The project aims to provide an accessible and convenient way for individuals to access drone technology and explore exciting opportunities worldwide.
+
 ## Software Technology Analysis
 The "software technology analysis" folder contains essential documentation related to the project's design and planning. It includes:
 
@@ -13,6 +16,12 @@ The "software technology analysis" folder contains essential documentation relat
 **Team Plan**: A plan outlining team roles, responsibilities, and collaboration strategies.  
 **Use Cases**: Detailed scenarios depicting how users interact with the system.  
 
+## Technologies Used
+The FlyBy project utilizes the following technologies:
+
+Java: Backend implementation in Java for robust and scalable application logic.
+Version Control (Git): For collaborative development and tracking project changes.
+UML Modeling Tools: Used for creating class diagrams, domain models, and sequence diagrams.
 
 
 
