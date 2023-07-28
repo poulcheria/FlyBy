@@ -19,9 +19,9 @@ The "software technology analysis" folder contains essential documentation relat
 ## Technologies Used
 The FlyBy project utilizes the following technologies:
 
-Java: Backend implementation in Java for robust and scalable application logic.  
-Version Control (Git): For collaborative development and tracking project changes.  
-UML Modeling Tools: Used for creating class diagrams, domain models, and sequence diagrams.  
+**Java**: Backend implementation in Java for robust and scalable application logic.  
+**Version Control (Git)**: For collaborative development and tracking project changes.  
+**UML Modeling Tools**: Used for creating class diagrams, domain models, and sequence diagrams.  
 
 
 
