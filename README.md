@@ -23,6 +23,20 @@ The FlyBy project utilizes the following technologies:
 **Version Control (Git)**: For collaborative development and tracking project changes.  
 **UML Modeling Tools**: Used for creating class diagrams, domain models, and sequence diagrams.  
 
+## Installation and Usage
+### With BlueJ   
+To run the backend of the FlyBY project:  
+1. Clone this repository to your local machine.  
+2. Open the project in BlueJ.  
+3. Compile and run the Main class.
 
+### Without BlueJ
+To run the backend of the FlyBY project:  
+### Installation   
+1. Install Java Development Kit (JDK)  
+2. Clone the Repository    
+### Usage    
+1. Compile the Project: compile the application using the following command:javac Main.java  
+2. Run the Application: run the application using the following command: java Main
 
 
